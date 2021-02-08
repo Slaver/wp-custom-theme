@@ -1,0 +1,20 @@
+{
+  "name": "custom",
+  "version": "1.1",
+  "authors": [
+    "Viacheslav Radionov <radionov@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~4.3.1",
+    "jquery": "~3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}

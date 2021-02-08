@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+$enable-flex: true;
+
+$theme-colors: (
+  "social": #fff
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px
+) !default;
+
+// Typo
+$headings-font-family: 'Roboto Slab', serif;
+$headings-font-weight: 600;
+$headings-margin-bottom: 1rem;
+
+// Links
+$link-color: #dc3545;
+$link-decoration: underline;
+$link-hover-decoration: none;
+
+// Jumbotron
+$jumbotron-padding: 1.5rem;
+$jumbotron-bg: transparent;
+
+// Cards
+$card-border-radius: .3rem;

@@ -1,0 +1,222 @@
+$hero-diagonal-offset: 50px;
+
+a {
+  transition: color .2s;
+}
+
+.btn {
+  transition: background-color .2s;
+
+  &-back {
+    text-decoration: none;
+  }
+}
+
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .container {
+    position: relative;
+  }
+
+  &-content {
+    &-logo {
+      img {
+        width: 150px;
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(lg) {
+          width: 220px;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &-languages {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+
+      @extend .d-flex;
+      @extend .justify-content-center;
+
+      li {
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        font-size: .8rem;
+        line-height: 2;
+        margin: 0 .2rem;
+
+        a {
+          color: $body-color;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            color: $link-color;
+          }
+        }
+
+        &.active {
+          background: $gray-300;
+          a {
+            color: $body-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.beer-filters {
+  font-size: .9rem;
+
+  &-title {
+    cursor: pointer;
+    text-decoration: underline;
+    padding-left: 22px;
+
+    &.active,
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 6px 0 6px;
+      border-color: $gray-900 transparent transparent transparent;
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+
+    &.active {
+      &:before {
+        border-width: 0 6px 8px 6px;
+        border-color: transparent transparent $gray-900 transparent;
+      }
+    }
+  }
+
+  .row {
+    background-color: rgba($gray-200, .5);
+  }
+}
+
+.beer-list {
+  border-top: 1px solid $gray-300;
+
+  .card {
+    border: 0;
+    background: none;
+    height: 240px;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(sm) {
+      width: 48%;
+      margin: .3rem;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 200px;
+      width: 30%;
+      margin: .5rem;
+    }
+
+    &-title {
+      text-align: center;
+    }
+
+    &-img-overlay {
+      width: 240px;
+      height: 240px;
+      position: relative;
+      z-index: 2;
+      @include media-breakpoint-up(lg) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 240px;
+      height: 240px;
+      position: absolute;
+      z-index: 1;
+      @include media-breakpoint-up(lg) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &:hover {
+      .card-img-overlay {
+        transition: background .25s ease-out;
+        background: rgba($white, .5);
+      }
+    }
+  }
+}
+
+.badge-available {
+  font-size: .8rem;
+  text-transform: lowercase;
+  vertical-align: middle;
+}
+
+.entry-beer {
+  &-thumbnail {
+    &-new {
+      &:after {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .table th,
+    .entry-beer-taste-title {
+      width: 200px;
+    }
+  }
+
+  .btn {
+    text-decoration: none;
+    .fas {
+      position: relative;
+      top: -1px;
+      font-size: 1rem;
+      left: -5px;
+    }
+  }
+
+  .progress {
+    height: 6px;
+  }
+
+  .available {
+    width: 15px;
+    line-height: 15px;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    &:after {
+      border-color: theme-color("danger");
+      content: '';
+      display: inline-block;
+      position: relative;
+      border-radius: 100%;
+      border-style: solid;
+      border-width: 6px;
+      top: -6px;
+    }
+  }
+}

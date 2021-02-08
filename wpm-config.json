@@ -1,0 +1,13 @@
+{
+	"post_types": {
+		"post": {},
+		"beers": {}
+	},
+	"taxonomies": {
+		"category" : {},
+		"post_tag" : {},
+		"ingredients" : {},
+		"flavor" : {},
+		"food" : {}
+	}
+}
